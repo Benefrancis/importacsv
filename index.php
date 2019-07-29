@@ -24,10 +24,6 @@
 
       function leCSV(evt) {
 
-         var ini = 0;
-         var fim = 5;
-
-
          var fileArr = evt.target.result.split('\n');
          var strDiv = '';
          var strCorpo = '';
@@ -51,7 +47,6 @@
                      strDiv += '<td class="font-weight-light">' + fileLine[j].trim() + '</td>';
                   }
                }
-
             }
             strDiv += '</tr>';
          }
@@ -67,10 +62,7 @@
 </head>
 
 <body>
-   <?php
-   ini_set('max_execution_time', 1080);
-   ?>
-
+   <?php ini_set('max_execution_time', 1080); ?>
    <form action="#" method="post" enctype="multipart/form-data">
       <input type="file" id="inputCSV" onchange="pegaCSV(this)">
    </form>
